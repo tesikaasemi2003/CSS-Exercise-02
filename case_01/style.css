@@ -1,36 +1,39 @@
 /* General Page Styling */
 body {
     margin: 0;
-    padding:0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
 }
 
-/* Container for the menu */
+/* Container for the menu  */
 .nav-container {
+    position: fixed;
+    left: 0;
+    top: 100px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: fit-content;
+    z-index: 1000;
 }
 
 /* The Menu Item (Anchor Tag) */
 .menu-item {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
-    justify-content: flex-end; /* Ensures text is to the left of the icon */
-    background-color: #8e44ad; /* Purple color */
+    background-color: #8e44ad;
     color: white;
     text-decoration: none;
     height: 50px;
-    width: 50px; /* Initial width - only icon visible */
-    border-radius: 4px;
+    width: 50px;
+    border-radius: 0 5px 5px 0;
     overflow: hidden;
-    transition: width 0.4s ease-in-out; /* The sliding effect */
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: width 0.3s ease-in-out;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
 
-/* Hover state - expands the width to show text */
+/* Hover state - expands to the right */
 .menu-item:hover {
     width: 180px;
 }
@@ -38,24 +41,25 @@ body {
 /* Text Label Styling */
 .menu-text {
     white-space: nowrap;
-    padding-right: 15px;
+    padding-left: 15px;
     font-weight: bold;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Fades the text in */
+    flex-grow: 1;
+    transition: opacity 0.2s ease;
 }
 
-/* Show text when the parent item is hovered */
+/* Show text when hovered */
 .menu-item:hover .menu-text {
     opacity: 1;
 }
 
-/* Icon Container Styling */
+/* Icon Styling */
 .menu-icon {
-    min-width: 50px; /* Keeps icon area consistent */
+    min-width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle visual separation */
+    background-color: rgba(255, 255, 255, 0.1);
 }
