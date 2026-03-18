@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="IJSE Web CSS Tute 01">
+    <meta name="author" content="IJSE">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>case_05</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>CSS Tute Case 01</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+    <style>
+        main{
+            width: 400vw;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+            animation: slider 12s infinite;
+        }
+
+        main > section{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        @keyframes slider{
+            0%,20%{
+                transform: translateX(0);
+            }
+
+            25%,45%{
+                transform: translateX(-100vw);
+            }
+
+            50%,70%{
+                transform: translateX(-200vw);
+            }
+
+
+        }
+
+    </style>
 </head>
 <body>
+<main>
+    <section>
+        <img src="../assets/lib/image1.jpg" alt="img1" width="100%">
+    </section>
+    <section>
+        <img src="../assets/lib/image2.jpg" alt="img2" width="100%">
+    </section>
+    <section>
+        <img src="../assets/lib/image3.jpg" alt="img3" width="100%">
+    </section>
 
-<div class="slider-container">
-    <div class="slider">
-        <img src="https://picsum.photos/id/1018/800/400" alt="Mountain View">
-        <img src="https://picsum.photos/id/1015/800/400" alt="River Valley">
-        <img src="https://picsum.photos/id/1016/800/400" alt="Ocean Sunset">
-    </div>
-</div>
-
+</main>
 </body>
 </html>
+
+
+
+
+
+
